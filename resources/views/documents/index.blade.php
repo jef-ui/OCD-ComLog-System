@@ -154,12 +154,19 @@
             }
         }
 
-        .button-group {
-    display: flex;
-    gap: 10px; /* Increase space between buttons */
-    flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
-    justify-content: flex-start; /* Align buttons to the left */
+        .button {
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    padding: 8px 16px; /* Match input padding height */
+    font-size: 14px;    /* Increase to match input font size */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
 
 .sidebar-title {
     text-align: left;
