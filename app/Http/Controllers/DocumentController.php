@@ -68,7 +68,7 @@ class DocumentController extends Controller
         
             Document::create($data);
         
-            return redirect(route('document.index'))->with('success', 'Communication Logged Successfully');
+            return redirect(route('document.index'))->with('success', 'Incomming Communication Logged Successfully');
     }
 
     
@@ -122,14 +122,14 @@ class DocumentController extends Controller
 
     $document->update($data);
 
-    return redirect(route('document.index'))->with('success', 'Update successfully');
+    return redirect(route('document.index'))->with('success', 'Incoming Communication updated successfully');
 }
 
     public function delete(Document $document){
 
         $document->delete();
 
-        return redirect(route ('document.index'))->with('success', 'Incomming Communication Deleted Successfully');
+        return redirect(route ('document.index'))->with('success', 'Incoming Communication Deleted Successfully');
 
     }
 
