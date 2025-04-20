@@ -107,6 +107,15 @@
     <h2>Create Communication Record</h2>
 
     <div>
+        @if (session()->has('success'))
+            <div class="success-message">
+                {{ session('success') }}
+            </div>
+        @endif
+    </div>
+
+
+    <div>
         @if($errors->any())
             <ul>
                 @foreach($errors->all() as $error)
