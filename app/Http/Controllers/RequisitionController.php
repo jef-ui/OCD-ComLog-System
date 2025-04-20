@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class RequisitionController extends Controller
 {
     public function index (){
-        return view ('requisitions.index');
+        $requisitions = Requisition::all();
+        return view ('requisitions.index', ['requisitions' => $requisitions]);
     }
 
     public function create (){
@@ -40,6 +41,9 @@ class RequisitionController extends Controller
         ]);
 
         $card = Requisition::create($data);
+
+        //this card data in session for preview
+        session(['card' => $card]);
 
         return redirect(route('requisition.index'))->with('success', 'RIS Data Successfully Added');
         
