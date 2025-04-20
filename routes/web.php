@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\RequisitionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,6 +28,14 @@ Route::get('/document/{id}/view', [DocumentController::class, 'show'])->name('do
 Route::get('/document/{document}/edit', [DocumentController::class, 'edit'])->name('document.edit');
 Route::put('/document/{document}/update', [DocumentController::class, 'update'])->name('document.update');
 Route::delete('/document/{document}/delete', [DocumentController::class, 'delete'])->name('document.delete');
+
+//Requisitions
+
+Route::get('/requisition', [RequisitionController::class,'index'])->name('requisition.index');
+Route::get('/requisition/create', [RequisitionController::class, 'create'])->name('requisition.create');
+Route::post('/requisition', [RequisitionController::class, 'store'])->name('requisition.store');
+
+
 
 
 
