@@ -27,6 +27,7 @@
                 <th>Received By</th>
                 <th>Position Designation</th>
                 <th>Request / Received Date</th>
+                <th>View & Download</th>
             </tr>
 
             @foreach ($requisitions as $requisition)
@@ -49,7 +50,13 @@
                 <td>{{$requisition->received_by}}</td>
                 <td>{{$requisition->position_designation}}</td>
                 <td>{{$requisition->date}}</td>
+
+                <td>
+                    <a href="{{ route('requisition.preview', ['requisition' => $requisition])}}">View</a>
+                </td>
             </tr>
+
+
 
 
 

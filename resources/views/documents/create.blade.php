@@ -105,7 +105,7 @@
     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo">
 
     <h2>Create Communication Record</h2>
-
+    
     <div>
         @if (session()->has('success'))
             <div class="success-message">

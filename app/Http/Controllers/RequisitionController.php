@@ -49,4 +49,9 @@ class RequisitionController extends Controller
         
     }
 
+    public function preview(Requisition $requisition)
+{
+    return view('requisitions.preview', compact('requisition'));
+}
+
 }

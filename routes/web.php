@@ -34,6 +34,8 @@ Route::delete('/document/{document}/delete', [DocumentController::class, 'delete
 Route::get('/requisition', [RequisitionController::class,'index'])->name('requisition.index');
 Route::get('/requisition/create', [RequisitionController::class, 'create'])->name('requisition.create');
 Route::post('/requisition', [RequisitionController::class, 'store'])->name('requisition.store');
+Route::get('/requisition/{requisition}/preview', [RequisitionController::class, 'preview'])->name('requisition.preview');
+
 
 
 
