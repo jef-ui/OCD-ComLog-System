@@ -190,10 +190,16 @@
     <h2>OFFICE OF CIVIL DEFENSE MIMAROPA</h2>
     <p>Communication Logging Management System</p>
     <div class="button-container">
-        <a href="https://ocd.gov.ph/" target="_blank" class="button orange-button">OCD Official Web Page</a>
+        <a href="https://web.facebook.com/civildefense4b" target="_blank" class="button orange-button">OCD MIMAROPA Official Facebook Page</a>
         <a href="{{ asset('storage/documents/citizens-charter.pdf') }}" target="_blank" class="button login">Citizen's Charter</a>
     </div>
-</div>
+
+    <p style="color: black; font-size: 20px; font-weight: bold; max-width: 800px; margin: 20px auto 0; text-align: center;">
+        The Communication Logging Management System (CLMS) is a digital platform designed to streamline the recording, tracking, and management of communications for faster access, reliable documentation, and effective coordination during emergencies and routine activities.  
+    </p>
+    
+</div>  
+
 
 <footer class="footer">
     Designed and Developed by ICTU MIMAROPA, Office of Civil Defense MIMAROPA © Copyright 2025

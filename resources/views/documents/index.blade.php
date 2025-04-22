@@ -94,17 +94,20 @@
         }
 
         .button {
-            display: inline-block;
-            background-color: #003366;
-            color: white;
-            padding: 4px 10px;
-            font-size: 12px;
-            text-align: center;
-            text-decoration: none;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 
         .button:hover {
             background-color: #0055aa;
@@ -236,7 +239,8 @@
                 <th>Concerned Section Personnel</th>
                 <th>Deadline of Compliance</th>
                 <th>Compliance Status</th>
-                <th>View/Download File</th>
+                <th>View</th>
+                <th>Download</th>
                 <th>Modify</th>
                 <th>Delete</th>
             </tr>
@@ -256,11 +260,13 @@
                     <td>{{ $document->deadline_of_compliance }}</td>
                     <td>{{ $document->compliance_status }}</td>
                     <td>
-                        <div class="button-group">
-                            <a class="button" href="{{ route('document.show', $document->id) }}">View</a>
-                            <a class="button" href="{{ asset('storage/' . $document->file_path) }}" download>Download</a>
-                        </div>
+                        <a class="button" href="{{ route('document.show', $document->id) }}">View</a>
                     </td>
+
+                    <td>
+                        <a class="button" href="{{ asset('storage/' . $document->file_path) }}" download>Download</a>
+                    </td>
+                    
                     
                     <td>
                         <a class="button" href="{{ route('document.edit', ['document' => $document]) }}">Modify</a>
@@ -269,7 +275,7 @@
                         <form method="post" action="{{ route('document.delete', ['document'=>$document]) }}">
                             @csrf
                             @method('delete')
-                            <input type="submit" class="button" value="Delete">
+                            <input type="submit" class="button" value="Delete" style="flood-color: crimson">
                         </form>
                     </td>
                 </tr>

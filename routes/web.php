@@ -35,6 +35,8 @@ Route::get('/requisition', [RequisitionController::class,'index'])->name('requis
 Route::get('/requisition/create', [RequisitionController::class, 'create'])->name('requisition.create');
 Route::post('/requisition', [RequisitionController::class, 'store'])->name('requisition.store');
 Route::get('/requisition/{requisition}/preview', [RequisitionController::class, 'preview'])->name('requisition.preview');
+    Route::get('/requisition/{requisition}/download', [RequisitionController::class, 'downloadPdf'])->name('requisition.download');
+
 
 
 

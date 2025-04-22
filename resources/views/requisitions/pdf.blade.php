@@ -231,9 +231,5 @@
           </tr>
         </tbody></table>
 
-        <a href="{{ route('requisition.download', $requisition->id) }}" class="btn btn-primary">
-          Download PDF
-      </a>
-    
 </body>
 </html>

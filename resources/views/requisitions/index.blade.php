@@ -27,7 +27,7 @@
                 <th>Received By</th>
                 <th>Position Designation</th>
                 <th>Request / Received Date</th>
-                <th>View & Download</th>
+                <th>View</th>
             </tr>
 
             @foreach ($requisitions as $requisition)

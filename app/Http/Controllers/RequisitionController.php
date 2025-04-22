@@ -43,15 +43,22 @@ class RequisitionController extends Controller
         $card = Requisition::create($data);
 
         //this card data in session for preview
-        session(['card' => $card]);
+        //session(['card' => $card]);
 
         return redirect(route('requisition.index'))->with('success', 'RIS Data Successfully Added');
         
     }
 
     public function preview(Requisition $requisition)
-{
-    return view('requisitions.preview', compact('requisition'));
-}
+        {
+             return view('requisitions.preview', compact('requisition'));
+        }
+
+    public function downloadPdf(Requisition $requisition)
+        {
+            $pdf = Pdf::loadView('requisitions.pdf', compact('requisition'));
+
+            return $pdf->download('RIS_' . $requisition->id . '.pdf');
+        }
 
 }
